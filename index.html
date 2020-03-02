@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script language="JavaScript" type="text/JavaScript">
+    <!--
+function warung()
+{
+    var catat = document.formwarung;
+    var hargaberas = parseInt(catat.beras.value) * parseInt(catat.berasa.value);
+    var hargagoreng = parseInt(catat.goreng.value) * parseInt(catat.gorenga.value);
+    var hargagula= parseInt(catat.gula.value) * parseInt(catat.gulaa.value);
+    var hargatelur = parseInt(catat.telur.value) * parseInt(catat.telura.value);
+    var hargaayam= parseInt(catat.ayam.value) * parseInt(catat.ayama.value);
+    var hargasemua = hargaberas + hargagoreng + hargagula+ hargatelur + hargaayam;
+
+    var membertiket = (catat.membertiket.value);
+
+
+if (hargasemua > 100000)
+    {
+        catat.TotalBayar.value = hargasemua;
+        catat.Diskon.value = hargasemua *10/100;
+        catat.JumlahBayar.value = hargasemua - parseInt(catat.Diskon.value);
+     }
+     else
+     {
+        catat.TotalBayar.value = hargasemua;
+        catat.Diskon.value = 0;
+        catat.JumlahBayar.value = hargasemua;
+    }   
+    if (membertiket == "bukanmember"){
+   }
+    else if (membertiket == "VIP"){
+    catat.TotalBayar.value = hargasemua;
+    catat.JumlahBayar.value = hargasemua *5/100;
+    catat.JumlahBayar.value = hargasemua -parseInt(catat.Jumlahbayar.value);
+
+    }
+}
+function awal(){
+document.formwarung.reset();
+}
+//-->
+</script>
+</head>
+<body>
+    <body>
+        <h2 align="center" >PEMBAYARAN DI WARUNG </h2>
+        <form name="formwarung" action="#">
+            <table border="1" align="center" style="width:589">
+                <tr >
+                    <th scope="col">No</th>
+                    <th  scope="col">Nama Barang</th>
+                    <th  scope="col">Harga</th>
+                    <th  scope="col">Quantity</th>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>1.</strong></td>
+                    <td><strong>Beras </strong></td>
+                    <td><strong>Rp
+                            <input type="text" name="beras" value="12000" size="20" disabled="disabled" />
+                        </strong></td>
+                    <td><input name="berasa" type="text" onkeyup="warung()" value="0" size="20" /></td>
+                </tr>
+                <tr >
+                    <td style="text-align:center"><strong>2.</strong></td>
+                    <td><strong>Minyak Goreng </strong></td>
+                    <td><strong>RP
+                            <input type="text" name="goreng" value="10000" size="20" disabled="disabled" />
+                        </strong></td>
+                    <td><input name="gorenga" type="text" onkeyup="warung()" value="0" size="20" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>3.</strong></td>
+                    <td><strong>GULA</strong></td>
+                    <td><strong>RP
+                            <input type="text" name="gula" value="14000" size="20" disabled="disabled" />
+                        </strong></td>
+                    <td><input name="gulaa" type="text" onkeyup="warung()" value="0" size="20" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><strong>4.</strong></td>
+                    <td><strong>Telur</span> </strong></td>
+                    <td><strong>RP
+                            <input type="text" name="telur" value="3000" size="20" disabled="disabled" />
+                        </strong></td>
+                    <td><input name="telura" type="text" onkeyup="warung()" value="0" size="20" /></td>
+                </tr>
+                <tr>
+                    <td ><strong>5.</strong></td>
+                    <td><strong>Ayam</strong></td>
+                    <td><strong>RP
+                            <input type="text" name="ayam" value="20000" size="20" disabled="disabled" />
+                        </strong></td>
+                    <td><input name="ayama" type="text" onkeyup="warung()" value="0" size="20" /></td>
+                </tr>
+                 <tr>
+                     <td colspan="3" style="text-align:center"><strong>Member</strong></td>
+                     <td> <select name="membertiket" onchange="warung()">
+                             <option value="piih">--Pilih--</option>
+                             <option value="bukanmember">Bukan Member</option>
+                             <option value="VIP">Member VIP</option>
+                            
+                         </select>
+
+                         </SELECT>
+                     </td>
+                 </tr>
+
+                <tr >
+                    <td colspan="3" style="text-align:center"><strong>Jumlah Total</strong></td>
+                    <td><input name="TotalBayar" type="text" style="text-align:center" disabled="disabled" value="-"
+                            size="20" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center"><strong>Diskon</strong></td>
+                    <td><input name="Diskon" type="text" style="text-align:center" disabled="disabled" value="-"
+                            size="20" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center"><strong>Jumlah Bayar</strong></td>
+                    <td><input name="JumlahBayar" type="text" style="text-align:center" disabled="disabled" value="-"
+                            size="20" /></td>
+                </tr>
+                
+
+            </table>
+
+        </br></br>
+        </br></br>
+            <div id="Layer1" style="position:absolute; width:166px; height:40px; z-index:1; left: 644px; top: 368px;">
+                <input type="button" value="B a t a l" onclick="awal()" />
+            </div>
+
+            <p align="center"> <span
+                    style="color:red">); Keterangan Diskon 10% di dapatkan apabila harga lebih dari 100.000 </br> );MemberVIP :Diskon 50%</span> <br />
+            </p>
+        </form>
+    </body>
+
+    </html>
+    
+</body>
+</html>
